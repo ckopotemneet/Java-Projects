@@ -1,8 +1,12 @@
 package math;
+
+import org.junit.jupiter.api.Test; //Портируем Junit 5 версии
 public class testunion //Проверка класса union
 {
-  // Меод testresults проверяет результат выполненения класса calculator из union, связанную с мат функциями
-  public static void testresults() 
+
+// Меод testresults проверяет результат выполненения класса calculator из union, связанную с мат функциям
+  @Test
+  public void testresults() 
   {
     // 1 0 0
     double[] p1 = union.calculator(1,0,0);

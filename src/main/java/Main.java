@@ -42,8 +42,6 @@ public class Main{
         throw new IllegalArgumentException("Необходимо указать 3 значения");
       }
       
-      System.out.println("Проведение тестов...");
-      testunion.testresults(); // Провередние тестов
       double[] answer = union.calculator(x,y,z); // Передаем полученные данные в calculator
       System.out.println(answer[0] + " " + answer[1]);  
     }
