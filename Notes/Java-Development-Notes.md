@@ -14,27 +14,21 @@
 Существуют системы автоматической сборки Java проектов, например: Maven и Grandle.
 Возьмём за основу Maven. У него существует понятие *жизненный цикл* последовательность этапов, которые
 выполняются при сборке Java-проекта
-```text
-       validate
-           |
-           v
-       compile
-           |
-           v
-         test
-           |
-           v
-       package
-           |
-           v
-        verify
-           |
-           v
-        install
-           |
-           v
-        deploy
-```
+<div align="center">
+  <p><code>validate</code></p>
+  ↓
+  <p><code>compile</code></p>
+  ↓
+  <p><code>test</code></p>
+  ↓
+  <p><code>package</code></p>
+  ↓
+  <p><code>verify</code></p>
+  ↓
+  <p><code>install</code></p>
+  ↓
+  <p><code>deploy</code></p>
+</div>
 Каждый этап выполняется последовательно и зависимо сверху вниз. Если использовать команду
 `mvn test` - то выполнятся все предыдущие этапы жизни Maven.
 Цель Maven - упрощение сборки программы, хотя и без него, можно ручками выполнить всю грязную работу
