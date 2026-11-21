@@ -73,10 +73,8 @@ Java-программы виртуальной машиной JVM без под�
 <br>
 <strong>Файлы и папки проекта</strong>
 <div align="center">
-
-<strong>Java-Projects/</strong>
-<br>
 <pre>
+Java-Projects/
 ├── .git/
 ├── .gitignore
 ├── pom.xml
@@ -94,7 +92,6 @@ Java-программы виртуальной машиной JVM без под�
 │           └── math/
 │               └── testunion.java
 └── target/
-</pre>
+</pre
 
-</div>
 </div>
