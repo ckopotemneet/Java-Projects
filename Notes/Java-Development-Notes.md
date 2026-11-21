@@ -1,8 +1,9 @@
-# Java Development Notes
+<h1 align="center">Java Development Notes</h1>
 
-Author : Ckopotemneet
-JDK : 21
-Build System : Maven
----
+<div align="left">
+<p>Author : Ckopotemneet</p>
+<p>JDK : 21</p>
+<p>Build System : Maven </p>
 
+</div>
 Этот конспект 
