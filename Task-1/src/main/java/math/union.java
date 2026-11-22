@@ -28,8 +28,5 @@ public class union // Общий публичный класс, в нем буд
       list.add(rand.nextDouble(100));
     }
     return list;
-  }
-
-  //Метод - создание статического  массива на n элеметов + заполнение слу 
-  public static 
+  } 
 }
