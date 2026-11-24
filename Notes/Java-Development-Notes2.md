@@ -48,14 +48,11 @@ enum — тип для фиксированного набора именова�
 enum Day {
     MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 }
-
 Day today = Day.MONDAY;
-
 if (today == Day.MONDAY) {
     System.out.println("Начало рабочей недели");
 }
 </code>
-/div>
 <div>
 Каждый этап выполняется последовательно и зависимо сверху вниз. Если использовать команду
 <code>mvn test</code> - то выполнятся все предыдущие этапы жизни Maven.
