@@ -28,12 +28,12 @@
 <h2 align="center">3.Форматированный вывод: методы format и printf (String.format, System.out.printf). Использование строк, вещественных и целых чисел.</h2>
 System.out.printf(...) сразу печатает текст в консоль, a String.format(...) создаёт строку, которую можно сохранить в переменную, затем
 вывести на экран через переменную или использовать позже. <p><br>
-<strong>Сразу выводит текст на экран</strong><p>
+<strong>Сразу выводит текст на экран</strong>
 <code>System.out.printf("Привет!"); </code><p>
 <br>
-<strong>Создает строку, но не выводит</strong><p>
+<strong>Создает строку, но не выводит</strong>
 <code>String greeting = String.format("Привет!");</code><p>
-<strong>Вывод сохраненной строки на экран</strong><p>
+<strong>Вывод сохраненной строки на экран</strong>
 <code>System.out.println(greeting);</code>
 <br>
 Форматированный вывод помогает вставлять значения в текст.
