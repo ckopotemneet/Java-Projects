@@ -33,7 +33,6 @@ System.out.printf(...) сразу печатает текст в консоль,
 <br>
 <strong>Создает строку, но не выводит</strong><p>
 <code>String greeting = String.format("Привет!");</code><p>
-<br>
 <strong>Вывод сохраненной строки на экран</strong><p>
 <code>System.out.println(greeting);</code>
 <br>
