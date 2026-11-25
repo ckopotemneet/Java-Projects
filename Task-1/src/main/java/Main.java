@@ -1,10 +1,13 @@
 import math.*;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+//https://github.com/VetrovSV/OOP/blob/master/plans/tasks_java.md
+// 
 public class Main{
+  
   public static void main(String[] args)
   {
-    int x,y,z;
+    double x,y,z;
     try //Попытка считывания данных (то место где может произойти ошибка)
     {
       if (args.length == 1 && args[0].equals("--help") )
@@ -19,9 +22,9 @@ public class Main{
       }
       else if ( args.length == 3) // Проверка что было передано 3 аргумета
       {
-        x = Integer.parseInt(args[0]);
-        y = Integer.parseInt(args[1]);
-        z = Integer.parseInt(args[2]);
+        x = Double.parseDouble(args[0]);
+        y = Double.parseDouble(args[1]);
+        z = Double.parseDouble(args[2]);
       }
       
       else if ( args.length == 0) // Проверка на то что программу вызывают без аргументов
