@@ -11,21 +11,21 @@ public class Procedure
      
      Возвращает ArrayList
   */ 
-  public static ArrayList<Double> createarraylist(int n, String i )
+  public static ArrayList<Double> createarraylist(int n, String i, Scanner sc )
   {
     ArrayList<Double> list = new ArrayList<>();
-    if (i.equalsIgnoreCase("yes"))
+    if (i.equalsIgnoreCase("yes") || i.equalsIgnoreCase("y") || i.equalsIgnoreCase("k"))
     {
       list = randlist(list, n);
     }
     else
     {
-      list = setlist(list, n);
+      list = setlist(list, n, sc);
     }
   return list;
   }
           //Приватный метод, заполняет ArrayList случайными числами
-  private static ArrayList<Double> randlist(ArrayList<>() list,int n)
+  private static ArrayList<Double> randlist(ArrayList<Double> list,int n)
   {
     Random rand = new Random();
     for (int i = 0; i < n ; i ++)
@@ -35,15 +35,30 @@ public class Procedure
   return list; 
   }
         // Приватный метод, пользователь сам вводит значения 
-  private static ArrayList<Double> setlist(ArrayList<>() list, int n)
+  private static ArrayList<Double> setlist(ArrayList<Double> list, int n, Scanner sc)
   {
-    Scanner sc = new Scanner(System.in);
     for (int i = 0; i < n; i++)
     {
-      System.out.print("Введите" + (i+1) + "элемент массива");
+      System.out.print("Введите " + (i+1) + " элемент массива");
       list.add(sc.nextDouble());
     }
   return list;
+  }
+
+      //Публичный метод, ничего не возвращает, выводит на экран по n элементов 
+  public static void showMassive(ArrayList<Double> list,int n)
+  {
+    for (int i = 0; i < list.size() ; i++)
+    {
+      if (i % n == 0)
+      {
+        System.out.printf("\n%.2f ", list.get(i));
+      }
+      else
+      {   
+        System.out.printf("%.2f ",list.get(i));
+      }
+    }
   }
 }
 
