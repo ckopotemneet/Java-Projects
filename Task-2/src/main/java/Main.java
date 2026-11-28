@@ -10,7 +10,21 @@ public class Main
     {
       interactive();
     }
-    else
+    else if(args[0].equals("qwe"))
+    {
+      if (args.length >=2 && !args[1].isEmpty())
+      {
+        Procedure.showMassive(Procedure.fileImport(), Integer.parseInt(args[1]));
+      }
+      else
+      {
+        System.out.print("Сколько значений в строке вы хотите увидеть?");
+        Scanner sc = new Scanner(System.in);
+        int k = sc.nextInt();
+        Procedure.showMassive(Procedure.fileImport(),k);
+      } 
+    }
+    else 
     {
       argsCom(args);
     }
@@ -36,7 +50,8 @@ public class Main
      int k;
      k = sc.nextInt(); 
      Procedure.showMassive(list,k);
-     System.out.printf("%nРезультат математической функции - %.2f%n",Nations.firstTask(list)); 
+     System.out.printf("%nРезультат математической функции - %.2f%n",Nations.firstTask(list));
+     Procedure.fileExport(list); 
     }
 
     //Обработка аргументов командной строки

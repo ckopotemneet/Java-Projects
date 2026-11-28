@@ -3,9 +3,15 @@ package processing;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.File;
 
 public class Procedure
 {
+
+
+  
   /* Создание динамического массива
      Принимает n кол-во элементов массива
      
@@ -24,6 +30,9 @@ public class Procedure
     }
   return list;
   }
+
+
+  
           //Приватный метод, заполняет ArrayList случайными числами
   private static ArrayList<Double> randlist(ArrayList<Double> list,int n)
   {
@@ -45,6 +54,8 @@ public class Procedure
   return list;
   }
 
+
+
       //Публичный метод, ничего не возвращает, выводит на экран по n элементов 
   public static void showMassive(ArrayList<Double> list,int n)
   {
@@ -59,6 +70,42 @@ public class Procedure
         System.out.printf("%.2f ",list.get(i));
       }
     }
+  }
+
+
+  // Запись в файл
+  public static void fileExport(ArrayList<Double> list)
+  {
+    try
+    {
+      FileWriter file = new FileWriter("processingFiles/numbers.txt");
+      file.write(list.toString());
+      file.close();
+    }
+    catch(IOException e)
+    {
+      System.out.print("Ошибка чтения файла");
+    }
+  }
+
+  
+  // Запись из файла
+  public static ArrayList<Double> fileImport()
+  {
+    ArrayList<Double> list = new ArrayList<>();
+    try
+    {
+      Scanner sc = new Scanner(new File("processingFiles/inputnumbers.txt"));
+      while(sc.hasNextDouble())
+      {
+        list.add(sc.nextDouble());
+      }
+    }
+    catch (IOException e)
+    {
+      System.out.print("Ошибка чтения файла");
+    }
+    return list;
   }
 }
 
